@@ -8,6 +8,8 @@ services:
   nginx:
     ports:
       - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
 
-  test:
-    image: nginx
+  certbot:
+    command: certonly --webroot --webroot-path=/tmp/acme_challenge --email grant@atriustech.com --agree-tos --no-eff-email -d directus.autonomy.institute
