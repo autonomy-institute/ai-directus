@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  directus:
+    environment:
+      - PUBLIC_URL="https://directus.autonomy.institute/"
+
+  nginx:
+    ports:
+      - "443:443"
+
+  test:
+    image: nginx
