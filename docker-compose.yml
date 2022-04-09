@@ -14,6 +14,7 @@ services:
     volumes:
       - ./data/uploads:/directus/uploads
       - ./data/extensions:/directus/extensions
+      - ./snapshots:/directus/snapshots
       - ./config.yaml:/directus/config.yaml
     environment:
       DB_CLIENT: pg

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMPOSE="/usr/local/bin/docker-compose --no-ansi"
+COMPOSE="/usr/local/bin/docker-compose"
 DOCKER="/usr/bin/docker"
 
 cd /home/directus/ai-directus/
