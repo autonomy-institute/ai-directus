@@ -1,0 +1,1569 @@
+version: 1
+directus: 9.12.1
+collections:
+  - collection: layers
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: layers
+      color: null
+      display_template: '{{name}}'
+      group: uclidian_maps
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 2
+      sort_field: sort
+      translations: null
+      unarchive_value: null
+    schema:
+      comment: null
+      name: layers
+      schema: public
+  - collection: maps
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: maps
+      color: null
+      display_template: null
+      group: uclidian_maps
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      comment: null
+      name: maps
+      schema: public
+  - collection: maps_layers
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: maps_layers
+      color: null
+      display_template: null
+      group: uclidian_maps
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 3
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      comment: null
+      name: maps_layers
+      schema: public
+  - collection: three_sixties
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: three_sixties
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: folder
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema: null
+  - collection: three_sixties_captures
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: three_sixties_captures
+      color: null
+      display_template: null
+      group: three_sixties
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      comment: null
+      name: three_sixties_captures
+      schema: public
+  - collection: three_sixties_legacy
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: three_sixties_legacy
+      color: null
+      display_template: null
+      group: three_sixties
+      hidden: false
+      icon: null
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema:
+      comment: null
+      name: three_sixties_legacy
+      schema: public
+  - collection: uclidian_maps
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: uclidian_maps
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: folder
+      item_duplication_fields: null
+      note: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+    schema: null
+fields:
+  - collection: directus_dashboards
+    field: color
+    meta: null
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: color
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: directus_dashboards
+    type: string
+  - collection: directus_flows
+    field: description
+    meta: null
+    schema:
+      comment: null
+      data_type: text
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: description
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: directus_flows
+    type: text
+  - collection: layers
+    field: cluster
+    meta:
+      collection: layers
+      conditions: null
+      display: null
+      display_options: null
+      field: cluster
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        label: Cluster
+      readonly: false
+      required: false
+      sort: 6
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: boolean
+      default_value: false
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: cluster
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: layers
+    type: boolean
+  - collection: layers
+    field: clusterMaxZoom
+    meta:
+      collection: layers
+      conditions: null
+      display: null
+      display_options: null
+      field: clusterMaxZoom
+      group: cluster_options
+      hidden: false
+      interface: input
+      note: null
+      options:
+        max: 22
+        min: 0
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: 14
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: clusterMaxZoom
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: layers
+    type: integer
+  - collection: layers
+    field: clusterRadius
+    meta:
+      collection: layers
+      conditions: null
+      display: null
+      display_options: null
+      field: clusterRadius
+      group: cluster_options
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: 50
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: clusterRadius
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: layers
+    type: integer
+  - collection: layers
+    field: cluster_options
+    meta:
+      collection: layers
+      conditions:
+        - name: Cluster enabled
+          rule:
+            _and:
+              - cluster:
+                  _eq: false
+          hidden: true
+      display: null
+      display_options: null
+      field: cluster_options
+      group: null
+      hidden: false
+      interface: group-detail
+      note: null
+      options:
+        start: closed
+      readonly: false
+      required: false
+      sort: 7
+      special:
+        - alias
+        - group
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema: null
+    type: alias
+  - collection: layers
+    field: date_created
+    meta:
+      collection: layers
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 3
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: timestamp with time zone
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: date_created
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: layers
+    type: timestamp
+  - collection: layers
+    field: date_updated
+    meta:
+      collection: layers
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_updated
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 4
+      special:
+        - date-updated
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: timestamp with time zone
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: date_updated
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: layers
+    type: timestamp
+  - collection: layers
+    field: file
+    meta:
+      collection: layers
+      conditions: null
+      display: null
+      display_options: null
+      field: file
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options:
+        folder: f748e96a-682f-4e4a-aa2c-86871402edf6
+      readonly: false
+      required: true
+      sort: 8
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: file
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: layers
+    type: uuid
+  - collection: layers
+    field: id
+    meta:
+      collection: layers
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: layers
+    type: uuid
+  - collection: layers
+    field: name
+    meta:
+      collection: layers
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: name
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: layers
+    type: string
+  - collection: layers
+    field: sort
+    meta:
+      collection: layers
+      conditions: null
+      display: null
+      display_options: null
+      field: sort
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: sort
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: layers
+    type: integer
+  - collection: layers
+    field: style
+    meta:
+      collection: layers
+      conditions: null
+      display: null
+      display_options: null
+      field: style
+      group: null
+      hidden: false
+      interface: input-code
+      note: null
+      options:
+        language: JSON
+        lineNumber: false
+      readonly: false
+      required: false
+      sort: 9
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: json
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: style
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: layers
+    type: json
+  - collection: maps
+    field: center
+    meta:
+      collection: maps
+      conditions: null
+      display: null
+      display_options: null
+      field: center
+      group: null
+      hidden: false
+      interface: map
+      note: null
+      options:
+        defaultView:
+          bearing: 0
+          center:
+            lat: 0
+            lng: 0
+          pitch: 0
+          zoom: 0
+        geometryType: Point
+      readonly: false
+      required: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: POINT
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: center
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: maps
+    type: geometry.Point
+  - collection: maps
+    field: date_created
+    meta:
+      collection: maps
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 2
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: timestamp with time zone
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: date_created
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: maps
+    type: timestamp
+  - collection: maps
+    field: date_updated
+    meta:
+      collection: maps
+      conditions: null
+      display: datetime
+      display_options:
+        relative: true
+      field: date_updated
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 3
+      special:
+        - date-updated
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      comment: null
+      data_type: timestamp with time zone
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: date_updated
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: maps
+    type: timestamp
+  - collection: maps
+    field: defaultLayers
+    meta:
+      collection: maps
+      conditions: null
+      display: null
+      display_options: null
+      field: defaultLayers
+      group: null
+      hidden: false
+      interface: select-multiple-checkbox
+      note: null
+      options:
+        choices:
+          - text: Buildings
+            value: buildings
+          - text: Terrain
+            value: terrain
+      readonly: false
+      required: false
+      sort: 9
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: json
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: defaultLayers
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: maps
+    type: json
+  - collection: maps
+    field: id
+    meta:
+      collection: maps
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: nextval('maps_id_seq'::regclass)
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: true
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: maps
+    type: integer
+  - collection: maps
+    field: layers
+    meta:
+      collection: maps
+      conditions: null
+      display: null
+      display_options: null
+      field: layers
+      group: null
+      hidden: false
+      interface: list-m2m
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 10
+      special:
+        - m2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema: null
+    type: alias
+  - collection: maps
+    field: slug
+    meta:
+      collection: maps
+      conditions: null
+      display: null
+      display_options: null
+      field: slug
+      group: null
+      hidden: false
+      interface: extension-wpslug
+      note: null
+      options:
+        prefix: https://ai-maps.vercel.app/
+        template: '{{title}}'
+      readonly: false
+      required: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: slug
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: maps
+    type: string
+  - collection: maps
+    field: style
+    meta:
+      collection: maps
+      conditions: null
+      display: null
+      display_options: null
+      field: style
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        allowOther: true
+        choices:
+          - text: Custom Dark
+            value: mapbox://styles/atriustech/cl2thn1z0000514mr0hvlty8a
+          - text: Streets
+            value: mapbox://styles/mapbox/streets-v11
+          - text: Outdoors
+            value: mapbox://styles/mapbox/outdoors-v11
+          - text: Light
+            value: mapbox://styles/mapbox/light-v10
+          - text: Dark
+            value: mapbox://styles/mapbox/dark-v10
+          - text: Satellite
+            value: mapbox://styles/mapbox/satellite-v9
+          - text: Satellite Streets
+            value: mapbox://styles/mapbox/satellite-streets-v11
+          - text: Navigation Day
+            value: mapbox://styles/mapbox/navigation-day-v1
+          - text: Navigation Night
+            value: mapbox://styles/mapbox/navigation-night-v1
+        placeholder: null
+      readonly: false
+      required: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: mapbox://styles/mapbox/streets-v9
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: style
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: maps
+    type: string
+  - collection: maps
+    field: title
+    meta:
+      collection: maps
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: title
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: maps
+    type: string
+  - collection: maps
+    field: zoom
+    meta:
+      collection: maps
+      conditions: null
+      display: null
+      display_options: null
+      field: zoom
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        defaultView:
+          bearing: 0
+          center:
+            lat: 71.442477264237
+            lng: 63.98449789489848
+          pitch: 0
+          zoom: 3.4976044629743672
+        geometryType: Point
+        max: 22
+        min: 0
+      readonly: false
+      required: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: 5
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: zoom
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: maps
+    type: integer
+  - collection: maps_layers
+    field: id
+    meta:
+      collection: maps_layers
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: nextval('maps_layers_id_seq'::regclass)
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: true
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: maps_layers
+    type: integer
+  - collection: maps_layers
+    field: layer
+    meta:
+      collection: maps_layers
+      conditions: null
+      display: null
+      display_options: null
+      field: layer
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: uuid
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: layers
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: layer
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: maps_layers
+    type: uuid
+  - collection: maps_layers
+    field: map
+    meta:
+      collection: maps_layers
+      conditions: null
+      display: null
+      display_options: null
+      field: map
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: null
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: maps
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: map
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: maps_layers
+    type: integer
+  - collection: three_sixties_captures
+    field: id
+    meta:
+      collection: three_sixties_captures
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: integer
+      default_value: nextval('three_sixties_captures_id_seq'::regclass)
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: true
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: null
+      name: id
+      numeric_precision: 32
+      numeric_scale: 0
+      schema: public
+      table: three_sixties_captures
+    type: integer
+  - collection: three_sixties_captures
+    field: open
+    meta:
+      collection: three_sixties_captures
+      conditions: null
+      display: null
+      display_options: null
+      field: open
+      group: null
+      hidden: false
+      interface: presentation-links
+      note: null
+      options:
+        links:
+          - label: Open
+            icon: open_in_new
+            type: normal
+            url: https://viewer.atrius.io/360?captureId={{id}}
+      readonly: false
+      required: false
+      sort: null
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema: null
+    type: alias
+  - collection: three_sixties_captures
+    field: tiles
+    meta:
+      collection: three_sixties_captures
+      conditions: null
+      display: null
+      display_options: null
+      field: tiles
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: null
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: tiles
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: three_sixties_captures
+    type: string
+  - collection: three_sixties_legacy
+    field: id
+    meta:
+      collection: three_sixties_legacy
+      conditions: null
+      display: extension-display-link
+      display_options:
+        prefix: https://viewer.atrius.io/360?productId=
+      field: id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: false
+      is_primary_key: true
+      is_unique: true
+      max_length: 255
+      name: id
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: three_sixties_legacy
+    type: string
+  - collection: three_sixties_legacy
+    field: open
+    meta:
+      collection: three_sixties_legacy
+      conditions: null
+      display: null
+      display_options: null
+      field: open
+      group: null
+      hidden: false
+      interface: presentation-links
+      note: null
+      options:
+        links:
+          - label: View
+            icon: open_in_new
+            type: normal
+            url: https://viewer.atrius.io/360?productId={{id}}
+      readonly: false
+      required: false
+      sort: 1
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema: null
+    type: alias
+  - collection: three_sixties_legacy
+    field: pid
+    meta:
+      collection: three_sixties_legacy
+      conditions: null
+      display: null
+      display_options: null
+      field: pid
+      group: null
+      hidden: false
+      interface: null
+      note: null
+      options: null
+      readonly: true
+      required: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: bigint
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: null
+      name: pid
+      numeric_precision: 64
+      numeric_scale: 0
+      schema: public
+      table: three_sixties_legacy
+    type: bigInteger
+  - collection: three_sixties_legacy
+    field: tiles
+    meta:
+      collection: three_sixties_legacy
+      conditions: null
+      display: null
+      display_options: null
+      field: tiles
+      group: null
+      hidden: false
+      interface: null
+      note: null
+      options: null
+      readonly: true
+      required: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      comment: null
+      data_type: character varying
+      default_value: null
+      foreign_key_column: null
+      foreign_key_schema: null
+      foreign_key_table: null
+      generation_expression: null
+      has_auto_increment: false
+      is_generated: false
+      is_nullable: true
+      is_primary_key: false
+      is_unique: false
+      max_length: 255
+      name: tiles
+      numeric_precision: null
+      numeric_scale: null
+      schema: public
+      table: three_sixties_legacy
+    type: string
+relations:
+  - collection: layers
+    field: file
+    meta:
+      junction_field: null
+      many_collection: layers
+      many_field: file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: directus_files
+    schema:
+      column: file
+      constraint_name: layers_file_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: layers
+  - collection: maps_layers
+    field: layer
+    meta:
+      junction_field: map
+      many_collection: maps_layers
+      many_field: layer
+      one_allowed_collections: null
+      one_collection: layers
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    related_collection: layers
+    schema:
+      column: layer
+      constraint_name: maps_layers_layer_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: layers
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: maps_layers
+  - collection: maps_layers
+    field: map
+    meta:
+      junction_field: layer
+      many_collection: maps_layers
+      many_field: map
+      one_allowed_collections: null
+      one_collection: maps
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: layers
+      sort_field: null
+    related_collection: maps
+    schema:
+      column: map
+      constraint_name: maps_layers_map_foreign
+      foreign_key_column: id
+      foreign_key_schema: public
+      foreign_key_table: maps
+      on_delete: SET NULL
+      on_update: NO ACTION
+      table: maps_layers
